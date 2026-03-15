@@ -1,0 +1,26 @@
+/* give an array of integers, return indices of two numbers such tat they add up to a specific target.
+you may assume that each input have exactly one solution, and you may not use some element tewice .
+
+Example:
+num=[2,7,11,15] , target =9
+because, num[0]+num[1]=9
+return [0,1] (index number will be return)
+*/
+
+#include <stdio.h>
+
+int main() {
+    int n[] = {2, 7, 11, 15};
+    int target = 17;
+    int size = 4;
+
+    for(int i = 0; i < size; i++){
+        for(int j = i + 1; j < size; j++){
+            if(n[i] + n[j] == target){
+                printf("Indices: %d %d", i, j);
+            }
+        }
+    }
+
+    return 0;
+}
